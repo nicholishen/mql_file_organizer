@@ -307,7 +307,7 @@ def main():
     )
     save_path = _input(
         msg='Directory to save files',
-        default=Path.home() / 'Desktop/MQL_FILES',
+        default=Path().absolute().parent / 'MQL_FILES',
         action=lambda inp: Path(inp),
         feedback=lambda res: f"Saving MQL files in {res}..."
     )
